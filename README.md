@@ -34,12 +34,6 @@ $ npm install
 $ npm start
 ```
 
-## react-hot-reloader
-
-```bash
-$ npm run dev
-```
-
 ## Build
 ```bash
 $ npm run build
