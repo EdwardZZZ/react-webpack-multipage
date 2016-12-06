@@ -28,7 +28,7 @@ var config = {
 }
 
 // entry
-var entryDir = path.resolve(__dirname, 'src')
+var entryDir = path.resolve(__dirname, './src/entry')
 fs.readdirSync(entryDir).forEach(function(name) {
     var m = name.match(/(.+)\.js(?:x)?$/)
     if (m && m[1]) config.entry[m[1]] = [path.resolve(entryDir, name)]

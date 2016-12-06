@@ -61,12 +61,13 @@ var config = {
 };
 
 // HtmlWebpackPlugin
-fs.readdirSync(__dirname).forEach(function(name) {
+var pageDir = './pages/'
+fs.readdirSync(path.resolve(__dirname, pageDir)).forEach(function(name) {
     var m = name.match(/(.+)\.html$/)
     if (m && m[0]) config.plugins.push(
         new HtmlWebpackPlugin({
-            filename: m[0],
-            template: m[0],
+            filename: pageDir + m[0],
+            template: pageDir + m[0],
             inject: false,
             chunksSortMode: 'none',
             minify: publicConfig.minify,
